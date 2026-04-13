@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Fase 4 · Sistemas de clasificación</title>
+  <link rel="stylesheet" href="../css/styles.css" />
+</head>
+<body data-phase="4">
+  <div class="container topbar">
+    <div class="breadcrumb">
+      <a href="../index.html">Inicio</a><span>›</span><span id="phase-title">Fase 4 · Sistemas de clasificación</span>
+    </div>
+  </div>
+
+  <div class="container phase-hero">
+    <section class="card hero-card">
+      <div class="meta">
+        <span class="pill" id="phase-status">En progreso</span>
+        <span class="pill">Estudiante: <strong id="student-name-chip">Sin nombre</strong></span>
+        <span class="pill" id="attempts-chip"></span>
+      </div>
+      <h1 id="phase-title">Fase 4 · Sistemas de clasificación</h1>
+      <p id="phase-summary"></p>
+      <div class="quiz-actions">
+        <a class="button btn-secondary" href="../index.html">Volver al inicio</a>
+        <a class="button btn-ghost" href="../certificado.html">Ir al certificado</a>
+      </div>
+    </section>
+  </div>
+
+  <div class="container section">
+    <div class="two-col">
+      <section class="card panel">
+        <h2>Teoría esencial</h2>
+        <ul id="theory-list" class="clean"></ul>
+      </section>
+
+      <section id="practice-card" class="card panel">
+        <h2 id="practice-title"></h2>
+        <p id="practice-prompt"></p>
+        <div class="note">
+          <strong>Entrega esperada:</strong> realiza la respuesta en un documento y súbela al EVAGD.
+        </div>
+        <h3>Guía de trabajo</h3>
+        <ul id="practice-guide" class="clean"></ul>
+        <label class="option" style="margin-top:16px">
+          <input id="practice-done-box" type="checkbox" />
+          <span>He terminado la práctica y la he subido al EVAGD.</span>
+        </label>
+      </section>
+    </div>
+  </div>
+
+  <div class="container section">
+    <section class="card panel">
+      <h2>Actividad interactiva</h2>
+      <div id="map-wrap" class="hidden"></div>
+      <p id="map-status" class="small hidden"></p>
+      <div id="map-quiz-block" class="hidden">
+        <div class="quiz-actions" style="margin-top:14px">
+          <button id="map-build-btn" class="btn-primary" onclick="generateMapQuiz()">Generar test del mapa</button>
+          <button id="map-submit-btn" class="btn-success" onclick="submitMapQuiz()">Corregir test del mapa</button>
+        </div>
+        <div id="map-quiz-questions"></div>
+        <p id="map-quiz-status" class="small"></p>
+      </div>
+    </section>
+  </div>
+
+  <div id="teacher-card" class="container section hidden">
+    <section class="card panel">
+      <h2>Validación docente</h2>
+      <div id="map-teacher-lock" class="hidden">
+        <p id="map-teacher-status" class="small"></p>
+        <div class="quiz-actions">
+          <input id="map-teacher-code" type="password" placeholder="Código docente" autocomplete="off" inputmode="numeric" maxlength="8" />
+          <button id="map-validate-btn" class="btn-primary" onclick="validateMapTeacherCode()">Validar fase</button>
+        </div>
+      </div>
+
+      <div id="phase-teacher-lock" class="">
+        <p id="teacher-status" class="small"></p>
+        <div class="quiz-actions">
+          <input id="teacher-code-input" type="password" placeholder="Código docente" autocomplete="off" inputmode="numeric" maxlength="8" />
+          <button class="btn-primary" onclick="validateTeacherCode()">Validar fase</button>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <div class="container section">
+    <section id="test-card" class="card panel">
+      <h2>Test de fase</h2>
+      <div class="meta">
+        <span class="pill" id="score-chip">0% mejor nota</span>
+        <span class="pill" id="result-chip">Sin intento</span>
+        <span class="pill">Intentos usados: <strong id="attempts-stat">0/2</strong></span>
+      </div>
+      <p id="test-lock-msg" class="small"></p>
+      <div class="quiz-actions">
+        <button id="build-test-btn" class="btn-primary" onclick="generatePhaseTest()">Generar test aleatorio</button>
+        <button id="submit-test-btn" class="btn-success" onclick="submitPhaseTest()" disabled>Corregir test</button>
+      </div>
+      <div id="test-questions"></div>
+      <p id="test-feedback" class="small"></p>
+    </section>
+  </div>
+
+  <div id="teacher-panel" class="card teacher-panel hidden"></div>
+  <footer class="container footer"><p>© <span id="footer-year"></span></p></footer>
+
+  <script src="../js/data.js"></script>
+  <script src="../js/core.js"></script>
+  <script src="../js/phase.js"></script>
+</body>
+</html>

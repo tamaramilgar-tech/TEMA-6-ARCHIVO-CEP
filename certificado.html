@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Certificado · Tema 6</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <div class="container topbar">
+    <div class="breadcrumb">
+      <a href="index.html">Inicio</a><span>›</span><span>Certificado</span>
+    </div>
+  </div>
+
+  <div class="container section">
+    <section class="card certificate">
+      <h2>Certificado del itinerario</h2>
+      <p>Estudiante: <strong id="cert-student"></strong></p>
+      <p>Fecha de emisión: <strong id="cert-date"></strong></p>
+      <p><span id="cert-result" class="result-badge fail">NO APTO / EN PROCESO</span></p>
+      <div class="stat-grid">
+        <div class="stat"><span class="small">Fases validadas</span><strong id="cert-completed"></strong></div>
+        <div class="stat"><span class="small">Progreso global</span><strong id="cert-score"></strong></div>
+        <div class="stat"><span class="small">Criterio de superación</span><strong>80 % por test + validación</strong></div>
+      </div>
+      <hr class="sep" />
+      <div style="overflow:auto">
+        <table style="width:100%;border-collapse:collapse">
+          <thead>
+            <tr>
+              <th style="text-align:left;padding:10px;border-bottom:1px solid #dfe7f1">Fase</th>
+              <th style="text-align:left;padding:10px;border-bottom:1px solid #dfe7f1">Título</th>
+              <th style="text-align:left;padding:10px;border-bottom:1px solid #dfe7f1">Mejor puntuación</th>
+              <th style="text-align:left;padding:10px;border-bottom:1px solid #dfe7f1">Estado</th>
+            </tr>
+          </thead>
+          <tbody id="cert-table"></tbody>
+        </table>
+      </div>
+      <div class="quiz-actions" style="margin-top:20px">
+        <button class="btn-primary" onclick="window.print()">Imprimir / guardar en PDF</button>
+        <a class="button btn-secondary" href="index.html">Volver al inicio</a>
+      </div>
+    </section>
+  </div>
+
+  <div id="teacher-panel" class="card teacher-panel hidden"></div>
+  <footer class="container footer"><p>© <span id="footer-year"></span></p></footer>
+  <script src="js/data.js"></script>
+  <script src="js/core.js"></script>
+  <script src="js/certificate.js"></script>
+</body>
+</html>
