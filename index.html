@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Tema 6 · Archivo</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <div class="container hero">
+    <div class="hero-grid">
+      <section class="card hero-card">
+        <span class="tag">Repositorio listo para GitHub Pages</span>
+        <h1>Tema 6 · Archivo</h1>
+        <p>Secuencia didáctica por fases con teoría, práctica, tipo test y validación docente.</p>
+        <p>Tu progreso se guarda automáticamente en este navegador. Realiza cada producto, súbelo al EVAGD y, cuando el docente lo haya revisado, valida la fase con el código que te facilite.</p>
+        <p>Los test disponen de dos intentos y se superan con un <strong>80 % de aciertos</strong>.</p>
+        <div class="controls">
+          <div style="flex:1 1 280px">
+            <label for="student-name" class="small">Nombre del estudiante</label>
+            <input id="student-name" type="text" placeholder="Escribe tu nombre y apellidos" />
+          </div>
+          <a class="button btn-primary" href="fases/fase1.html">Empezar ahora</a>
+          <a class="button btn-secondary" href="certificado.html">Ir al certificado</a>
+          <button class="btn-danger" onclick="resetAllProgress()">Borrar progreso</button>
+        </div>
+      </section>
+      <aside class="card progress-wrap">
+        <div class="ring" id="progress-value">
+          <div class="ring-inner">
+            <strong><span id="progress-num">0</span>/<span id="progress-total">7</span></strong>
+            <span id="progress-text">0% completado</span>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <div class="container section">
+    <div class="section-title">
+      <h2>Fases del tema</h2>
+      <span class="small">Estudiante: <strong class="student-name-live">tu nombre</strong></span>
+    </div>
+    <div id="phase-grid" class="grid"></div>
+  </div>
+
+  <div id="teacher-panel" class="card teacher-panel hidden"></div>
+
+  <footer class="container footer">
+    <p>Repositorio preparado para GitHub Pages. Mantén <strong>index.html</strong> en la raíz del proyecto. © <span id="footer-year"></span></p>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/core.js"></script>
+  <script src="js/home.js"></script>
+</body>
+</html>
